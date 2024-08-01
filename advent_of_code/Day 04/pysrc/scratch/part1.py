@@ -20,13 +20,14 @@ def get_score (input_string):
     print(f"Final score for {card_str}: {final_score}")
     return final_score
 
-total_final_score = 0
+def main():
+    total_final_score = 0
 
-i = 0
-while i < len(data):
-    input_string = data[i].strip()
-    final_score = get_score(input_string)
-    total_final_score += final_score
-    i += 1
-    
-print(f"Total final score: {total_final_score}")
+    i = 0
+    while i < len(data):
+        input_string = data[i].strip()
+        final_score = get_score(input_string)
+        total_final_score += final_score
+        i += 1
+        
+    print(f"Total final score: {total_final_score}")
