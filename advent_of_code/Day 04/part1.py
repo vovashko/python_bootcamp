@@ -7,12 +7,11 @@ def get_score (input_string):
     winning_numbers = []
     card_str, numbers_str = input_string.split(':')
     scratched_str, winning_str = numbers_str.split('|')
-    scratched_numbers = scratched_str.split(' ')
-    winning_numbers = winning_str.split(' ')
+    scratched_numbers = scratched_str.split()
+    winning_numbers = winning_str.split()
 
 
     score = [i for i in scratched_numbers if i in winning_numbers]
-    score = [num for num in score if num]
 
     if len(score) <= 0:
         final_score = 0
